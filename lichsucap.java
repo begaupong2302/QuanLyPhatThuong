@@ -4,22 +4,21 @@
  */
 package QuanLyCapPhanThuong;
 
+import java.util.Date;
+
 /**
  *
  * @author admin
  */
-public class giaykhen {
-    private int IDgiaykhen;
-    private int IDhs;
+public class lichsucap {
+    private int ID;
     private int IDphanthuong;
     private int soluong;
+    private Date ngaycap;
+    private int IDnguoicap;
 
-    public int getIDgiaykhen() {
-        return IDgiaykhen;
-    }
-
-    public int getIDhs() {
-        return IDhs;
+    public int getID() {
+        return ID;
     }
 
     public int getIDphanthuong() {
@@ -30,12 +29,16 @@ public class giaykhen {
         return soluong;
     }
 
-    public void setIDgiaykhen(int IDgiaykhen) {
-        this.IDgiaykhen = IDgiaykhen;
+    public Date getNgaycap() {
+        return ngaycap;
     }
 
-    public void setIDhs(int IDhs) {
-        this.IDhs = IDhs;
+    public int getIDnguoicap() {
+        return IDnguoicap;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public void setIDphanthuong(int IDphanthuong) {
@@ -45,6 +48,13 @@ public class giaykhen {
     public void setSoluong(int soluong) {
         this.soluong = soluong;
     }
-    
+
+    public void setNgaycap(Date ngaycap) {
+        this.ngaycap = ngaycap;
+    }
+
+    public void setIDnguoicap(int IDnguoicap) {
+        this.IDnguoicap = IDnguoicap;
+    }
     
 }

@@ -4,47 +4,57 @@
  */
 package QuanLyCapPhanThuong;
 
+import java.util.Date;
+
 /**
  *
  * @author admin
  */
-public class giaykhen {
-    private int IDgiaykhen;
-    private int IDhs;
-    private int IDphanthuong;
-    private int soluong;
+public class GiayKhen {
+    private int id;
+    private String hoTen;
+    private String Truong;
+    private Date capNgay;
+    private String nguoiCap;
 
-    public int getIDgiaykhen() {
-        return IDgiaykhen;
+    public int getId() {
+        return id;
     }
 
-    public int getIDhs() {
-        return IDhs;
+    public String getHoTen() {
+        return hoTen;
     }
 
-    public int getIDphanthuong() {
-        return IDphanthuong;
+    public String getTruong() {
+        return Truong;
     }
 
-    public int getSoluong() {
-        return soluong;
+    public Date getCapNgay() {
+        return capNgay;
     }
 
-    public void setIDgiaykhen(int IDgiaykhen) {
-        this.IDgiaykhen = IDgiaykhen;
+    public String getNguoiCap() {
+        return nguoiCap;
     }
 
-    public void setIDhs(int IDhs) {
-        this.IDhs = IDhs;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setIDphanthuong(int IDphanthuong) {
-        this.IDphanthuong = IDphanthuong;
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
     }
 
-    public void setSoluong(int soluong) {
-        this.soluong = soluong;
+    public void setTruong(String Truong) {
+        this.Truong = Truong;
     }
-    
+
+    public void setCapNgay(Date capNgay) {
+        this.capNgay = capNgay;
+    }
+
+    public void setNguoiCap(String nguoiCap) {
+        this.nguoiCap = nguoiCap;
+    }
     
 }

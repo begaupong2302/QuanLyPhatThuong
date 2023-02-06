@@ -4,37 +4,48 @@
  */
 package QuanLyCapPhanThuong;
 
+import java.util.Date;
+
 /**
  *
  * @author admin
  */
-public class quydoi {
-    private String Madanhhieu;
-    private String tendanhhieu;
-    private int IDphanthuong;
+public class QuyDoi {
+    private int id;
+    private Qua qua;
+    private int idSuKien;
+    private Date ngayPhat;
 
-    public String getMadanhhieu() {
-        return Madanhhieu;
+    public int getId() {
+        return id;
     }
 
-    public String getTendanhhieu() {
-        return tendanhhieu;
+    public Qua getQua() {
+        return qua;
     }
 
-    public int getIDphanthuong() {
-        return IDphanthuong;
+    public int getIdSuKien() {
+        return idSuKien;
     }
 
-    public void setMadanhhieu(String Madanhhieu) {
-        this.Madanhhieu = Madanhhieu;
+    public Date getNgayPhat() {
+        return ngayPhat;
     }
 
-    public void setTendanhhieu(String tendanhhieu) {
-        this.tendanhhieu = tendanhhieu;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setIDphanthuong(int IDphanthuong) {
-        this.IDphanthuong = IDphanthuong;
+    public void setQua(Qua qua) {
+        this.qua = qua;
+    }
+
+    public void setIdSuKien(int idSuKien) {
+        this.idSuKien = idSuKien;
+    }
+
+    public void setNgayPhat(Date ngayPhat) {
+        this.ngayPhat = ngayPhat;
     }
     
 }

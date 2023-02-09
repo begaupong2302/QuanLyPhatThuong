@@ -7,6 +7,8 @@ import views.NhanKhauManagerFrame.AddNewPeopleJFrame;
 import views.NhanKhauManagerFrame.DangKyTamTruJFrame;
 import views.NhanKhauManagerFrame.DangKyTamVangJFrame;
 import views.NhanKhauManagerFrame.KhaiTuJFrame;
+import views.PhatThuongManager.ThemPhanThuongMoi;
+import views.PhatThuongManager.ThongKeMoiHo;
 
 /**
  *
@@ -40,14 +42,12 @@ public class PhatThuongPanel extends javax.swing.JPanel {
         tamVangBtn = new javax.swing.JButton();
         tablePanel = new javax.swing.JPanel();
         addNewBtn = new javax.swing.JButton();
-        tamTruBtn = new javax.swing.JButton();
-        khaiTuBtn = new javax.swing.JButton();
         jtfSearch = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         tamVangBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        tamVangBtn.setText("ĐK tạm vắng");
+        tamVangBtn.setText("Thống kê");
         tamVangBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tamVangBtnActionPerformed(evt);
@@ -73,22 +73,6 @@ public class PhatThuongPanel extends javax.swing.JPanel {
             }
         });
 
-        tamTruBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        tamTruBtn.setText("ĐK tạm trú");
-        tamTruBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tamTruBtnActionPerformed(evt);
-            }
-        });
-
-        khaiTuBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        khaiTuBtn.setText("Khai Tử");
-        khaiTuBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                khaiTuBtnActionPerformed(evt);
-            }
-        });
-
         jtfSearch.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jtfSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,9 +93,7 @@ public class PhatThuongPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addNewBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tamTruBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tamVangBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(khaiTuBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tamVangBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -126,39 +108,23 @@ public class PhatThuongPanel extends javax.swing.JPanel {
                         .addComponent(addNewBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(tamVangBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tamTruBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(khaiTuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void addNewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewBtnActionPerformed
-
+        ThemPhanThuongMoi ThemPhanThuongMoi = new ThemPhanThuongMoi();
+        ThemPhanThuongMoi.setLocationRelativeTo(null);
+        ThemPhanThuongMoi.setResizable(false);
+        ThemPhanThuongMoi.setVisible(true);
     }//GEN-LAST:event_addNewBtnActionPerformed
 
     private void tamVangBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tamVangBtnActionPerformed
-        // hien jframe dang ky tam vang
-        DangKyTamVangJFrame dangKyTamVangJFrame = new DangKyTamVangJFrame(this.parentJFrame);
-        dangKyTamVangJFrame.setLocationRelativeTo(null);
-        dangKyTamVangJFrame.setResizable(false);
-        dangKyTamVangJFrame.setVisible(true);
+        ThongKeMoiHo thongkemoiho = new ThongKeMoiHo();
+        thongkemoiho.setLocationRelativeTo(null);
+        thongkemoiho.setResizable(false);
+        thongkemoiho.setVisible(true);
     }//GEN-LAST:event_tamVangBtnActionPerformed
-
-    private void tamTruBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tamTruBtnActionPerformed
-        DangKyTamTruJFrame dangKyTamTruJFrame = new DangKyTamTruJFrame(this.parentJFrame);
-        dangKyTamTruJFrame.setLocationRelativeTo(null);
-        dangKyTamTruJFrame.setResizable(false);
-        dangKyTamTruJFrame.setVisible(true);
-    }//GEN-LAST:event_tamTruBtnActionPerformed
-
-    private void khaiTuBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khaiTuBtnActionPerformed
-        KhaiTuJFrame khaiTuJFrame = new KhaiTuJFrame(this.parentJFrame);
-        khaiTuJFrame.setLocationRelativeTo(null);
-        khaiTuJFrame.setResizable(false);
-        khaiTuJFrame.setVisible(true);
-    }//GEN-LAST:event_khaiTuBtnActionPerformed
 
     private void jtfSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSearchActionPerformed
         // TODO add your handling code here:
@@ -168,9 +134,7 @@ public class PhatThuongPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addNewBtn;
     private javax.swing.JTextField jtfSearch;
-    private javax.swing.JButton khaiTuBtn;
     private javax.swing.JPanel tablePanel;
-    private javax.swing.JButton tamTruBtn;
     private javax.swing.JButton tamVangBtn;
     // End of variables declaration//GEN-END:variables
 }

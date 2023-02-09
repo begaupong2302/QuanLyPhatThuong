@@ -39,6 +39,7 @@ public class ClassTableModel {
         });
         return dtm;
     }
+    
     // table cho tieusu
     public DefaultTableModel setTableTieuSu(List<TieuSuModel> tieuSu, String[] listColumn) {
         final int column = listColumn.length;

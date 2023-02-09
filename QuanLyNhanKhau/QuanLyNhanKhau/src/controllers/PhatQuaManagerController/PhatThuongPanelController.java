@@ -5,6 +5,7 @@
 package controllers.PhatQuaManagerController;
 
 import Bean.NhanKhauBean;
+import static controllers.PhatQuaManagerController.PhatThuongController.INTEST;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -45,7 +46,7 @@ public class PhatThuongPanelController {
         classTableModel = new ClassTableModel();
         this.nhanKhauService = new NhanKhauService();
         this.listNhanKhauBeans = this.nhanKhauService.getListNhanKhau();
-        initAction();
+        //initAction();
     }
 
     public PhatThuongPanelController() {
@@ -79,12 +80,9 @@ public class PhatThuongPanelController {
     }
     
     public void setDataTable() {
-        List<NhanKhauModel> listItem = new ArrayList<>();
-        this.listNhanKhauBeans.forEach(nhankhau -> {
-            listItem.add(nhankhau.getNhanKhauModel());
-        });
-        DefaultTableModel model = classTableModel.setTableNhanKhau(listItem, COLUMNS);
-        JTable table = new JTable(model) {
+        Object[][] data = INTEST();
+        
+        JTable table = new JTable(data, COLUMNS) {
             @Override
             public boolean editCellAt(int row, int column, EventObject e) {
                 return false;

@@ -43,7 +43,9 @@ public class PhatThuongController {
         }
         return null;
     }
-    public static void INTEST(){
+    public static Object[][] INTEST(){
+        Object[][] data = new Object[100][5];
+        int count = 0;
         for (QuyDoi quydoi : PhatThuongPhatQuaService.getListQuyDoi()){
             String hoten = "";
             String tenqua = "";
@@ -57,11 +59,12 @@ public class PhatThuongController {
             }
             tenqua = quydoi.getQua().getTenQua();
             soluong = quydoi.getQua().getSoLuong();
-            System.out.print(hoten);
-            System.out.print(tenqua);
-            System.out.print(soluong);
-            System.out.print(danhhieu);
-            
+            data[count][0] = quydoi.getId();
+            data[count][1] = hoten;
+            data[count][2] = tenqua;
+            data[count][3] = soluong;
+            data[count][4] = danhhieu;
         }
+        return data;
     }
 }

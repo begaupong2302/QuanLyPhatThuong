@@ -17,7 +17,7 @@ import views.HoKhauManagePanel;
 import views.HomePagePanel;
 import views.NhanKhauManagePanel;
 import views.ThongKePanel;
-import views.PhatQuaPhatThuong;
+import views.PhatThuongPanel;
 import views.TimKiemPanel;
 
 /**
@@ -129,8 +129,7 @@ public class MainController {
                     view = new ThongKePanel(this.jfrMain);
                     break;
                 case "Poong":
-                    view = new PhatQuaPhatThuong(this.jfrMain);
-                    break;
+                    view = new PhatThuongPanel(this.jfrMain);
                 default:
                     break;
             }

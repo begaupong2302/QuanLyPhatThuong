@@ -5,7 +5,6 @@
 package services;
 
 import QuanLyCapPhanThuongModels.GiayKhen;
-import QuanLyCapPhanThuongModels.GiayKhenHocSInhGioi;
 import QuanLyCapPhanThuongModels.GiayKhenNamHoc;
 import QuanLyCapPhanThuongModels.Qua;
 import QuanLyCapPhanThuongModels.QuyDoi;
@@ -39,32 +38,6 @@ public class PhatThuongPhatQuaService {
                 qua.setSoLuong(rs.getInt("soLuong"));
         
                 list.add(qua);
-            }
-            preparedStatement.close();
-            connection.close();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return list;
-    }
-    public static List<GiayKhenHocSInhGioi> getListGiayKhenHocSinhGioi(){
-        List<GiayKhenHocSInhGioi> list = new ArrayList<>();
-        try {
-            Connection connection = MysqlConnection.getMysqlConnection();
-            String query = "SELECT * FROM quan_ly_nhan_khau.giay_khen_hoc_sinh_gioi;";
-            PreparedStatement preparedStatement = (PreparedStatement)connection.prepareStatement(query);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
-                GiayKhenHocSInhGioi giaykhen = new GiayKhenHocSInhGioi();
-                giaykhen.setId(rs.getInt("id"));
-                giaykhen.setHoTen(rs.getString("hoTen"));
-                giaykhen.setTruong(rs.getString("Truong"));
-                giaykhen.setCapNgay(rs.getDate("capNgay"));
-                giaykhen.setNguoiCap(rs.getString("nguoiCap"));
-                giaykhen.setCap(rs.getString("cap"));
-                giaykhen.setGiai(rs.getString("Giai"));
-        
-                list.add(giaykhen);
             }
             preparedStatement.close();
             connection.close();
@@ -132,7 +105,7 @@ public class PhatThuongPhatQuaService {
             while (rs.next()){
                 ThuongCuoiNam giaykhen = new ThuongCuoiNam();
                 giaykhen.setId(rs.getInt("id"));
-                giaykhen.setGiayKhen(PhatThuongController.getGiayKhenById(rs.getInt("idGiayKhen")));
+                giaykhen.setGiayKhenNamHoc(PhatThuongController.getGiayKhenById(rs.getInt("idGiayKhen")));
                 giaykhen.setIdNhanKhau(rs.getInt("idNhanKhau"));
         
                 list.add(giaykhen);

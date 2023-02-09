@@ -12,7 +12,7 @@ import models.NhanKhauModel;
  */
 public class ThuongCuoiNam {
     private int id;
-    private GiayKhen GiayKhen;
+    private GiayKhenNamHoc GiayKhenNamHoc;
     private int idNhanKhau;
 
     public int getIdNhanKhau() {
@@ -23,24 +23,21 @@ public class ThuongCuoiNam {
         return id;
     }
 
-    public GiayKhen getGiayKhen() {
-        return GiayKhen;
-    }
-
     public void setIdNhanKhau(int idNhanKhau) {
         this.idNhanKhau = idNhanKhau;
     }
-
-
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setGiayKhen(GiayKhen GiayKhen) {
-        this.GiayKhen = GiayKhen;
+    public GiayKhenNamHoc getGiayKhenNamHoc() {
+        return GiayKhenNamHoc;
+    }
+
+    public void setGiayKhenNamHoc(GiayKhenNamHoc GiayKhenNamHoc) {
+        this.GiayKhenNamHoc = GiayKhenNamHoc;
     }
 
 
-    
 }
